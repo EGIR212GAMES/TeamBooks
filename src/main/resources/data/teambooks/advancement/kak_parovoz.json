@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "got_enchantment": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "text": "Паровозик чух-чух-чух — добудьте зачарование Как паровоз"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "minecraft:minecart"
+    },
+    "title": {
+      "text": "Паровозик чех-чух-чух"
+    }
+  },
+  "requirements": [
+    [
+      "got_enchantment"
+    ]
+  ]
+}

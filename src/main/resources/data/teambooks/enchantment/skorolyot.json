@@ -1,0 +1,34 @@
+{
+  "anvil_cost": 2,
+  "description": {
+    "text": "Скоролёт"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.25,
+          "per_level_above_first": 0.25
+        },
+        "attribute": "minecraft:movement_speed",
+        "id": "teambooks:enchantment.skorolyot",
+        "operation": "add_multiplied_base"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 15,
+    "per_level_above_first": 8
+  },
+  "max_level": 5,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 8
+  },
+  "slots": [
+    "any"
+  ],
+  "supported_items": "#teambooks:enchantable_skorolyot",
+  "weight": 10
+}

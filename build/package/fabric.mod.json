@@ -1,0 +1,28 @@
+﻿{
+  "schemaVersion": 1,
+  "id": "teambooks",
+  "version": "1.0.0",
+  "name": "TeamBooks",
+  "description": "Server-side mod: enchantments Skorolyot (happy ghast harness speed) and Parovoz (minecart speed), plus enchanting-table book copying.",
+  "authors": [
+    "teambooks"
+  ],
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "com.teambooks.TeamBooksMod"
+    ]
+  },
+  "mixins": [
+    "teambooks.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": ">=26.3",
+    "fabric-api": "*",
+    "polymer-core": ">=0.18.4+26.3",
+    "polymer-resource-pack": ">=0.18.4+26.3"
+  }
+}
+

@@ -1,0 +1,20 @@
+{
+  "anvil_cost": 4,
+  "description": {
+    "text": "Как паровоз"
+  },
+  "max_cost": {
+    "base": 40,
+    "per_level_above_first": 20
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 10,
+    "per_level_above_first": 20
+  },
+  "slots": [
+    "any"
+  ],
+  "supported_items": "#teambooks:enchantable_kak_parovoz",
+  "weight": 10
+}

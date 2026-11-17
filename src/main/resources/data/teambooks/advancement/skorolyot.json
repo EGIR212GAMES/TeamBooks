@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "got_enchantment": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "text": "Я скорость — добудьте зачарование Скоролёт"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "minecraft:white_harness"
+    },
+    "title": {
+      "text": "Я скорость"
+    }
+  },
+  "requirements": [
+    [
+      "got_enchantment"
+    ]
+  ]
+}
