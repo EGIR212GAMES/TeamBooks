@@ -11,10 +11,7 @@ import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
-import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
 
 public final class EnchantUtil {
     private static final Set<Identifier> ENCHANTABLE_ITEMS = Set.of(
@@ -53,18 +50,16 @@ public final class EnchantUtil {
     private static final Identifier KAK_PAROVOZ = Identifier.fromNamespaceAndPath("teambooks", "kak_parovoz");
     public static final String NBT_KEY_KAK_PAROVOZ = "teambooks:kak_parovoz";
 
-    private static final Map<UUID, Integer> MINE_CART_LEVELS = new ConcurrentHashMap<>();
-
-    public static void setMinecartLevel(UUID uuid, int level) {
-        if (level > 0) {
-            MINE_CART_LEVELS.put(uuid, level);
-        } else {
-            MINE_CART_LEVELS.remove(uuid);
-        }
-    }
-
-    public static int getMinecartLevel(UUID uuid) {
-        return MINE_CART_LEVELS.getOrDefault(uuid, 0);
+    /**
+     * Target movement speed in blocks per tick (Minecraft runs at 20 ticks/second).
+     * These values intentionally preserve the enchantment's 20/56/116 blocks-per-second tiers.
+     */
+    public static double kakParovozSpeedPerTick(int level) {
+        return switch (level) {
+            case 1 -> 20.0 / 20.0;
+            case 2 -> 56.0 / 20.0;
+            default -> 116.0 / 20.0;
+        };
     }
 
     public static Holder<Enchantment> kakParovozHolder(net.minecraft.core.RegistryAccess access) {

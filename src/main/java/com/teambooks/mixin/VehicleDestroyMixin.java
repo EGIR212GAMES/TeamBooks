@@ -1,6 +1,7 @@
 package com.teambooks.mixin;
 
 import com.teambooks.EnchantUtil;
+import com.teambooks.KakParovozMinecart;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -22,7 +23,7 @@ public abstract class VehicleDestroyMixin {
         if (!(self instanceof AbstractMinecart)) {
             return;
         }
-        int enchLevel = EnchantUtil.getMinecartLevel(self.getUUID());
+        int enchLevel = ((KakParovozMinecart) (Object) self).teambooksGetKakParovozLevel();
         if (enchLevel <= 0) {
             return;
         }
